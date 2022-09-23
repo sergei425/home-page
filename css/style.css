@@ -185,6 +185,9 @@ html {
   left: -80px;
   transform: rotate(180deg);
 }
+.hidden {
+  display: none;
+}
 .slider__next {
   right: -80px;
 }
@@ -196,10 +199,13 @@ html {
 }
 .slider__item {
   min-width: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   flex-wrap: wrap;
   gap: 28px;
+}
+.slider__item.slider__item-show {
+  display: flex;
 }
 .slider__item > span {
   display: inline-flex;
