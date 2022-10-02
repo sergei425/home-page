@@ -9,11 +9,11 @@ const currentTime = document.querySelector(".current-time");
 const duration = document.querySelector(".duration-time");
 const progress = document.getElementById("progress");
 const progressContainer = document.getElementById("progress-container");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
+// const next = document.querySelector(".next");
+// const prev = document.querySelector(".prev");
 const speed = document.querySelector(".speed");
 const title = document.querySelector('.title')
-const titleDesktop = document.querySelector('.title-desktop')
+//const titleDesktop = document.querySelector('.title-desktop')
 const info = document.querySelector('.info')
 const volumeBtn = document.querySelector(".volume");
 const volumeNoneBtn = document.querySelector(".volume-none");
@@ -21,7 +21,7 @@ const volumeRange = document.querySelector(".volume-range");
 
 function setTitle(index) {
   title.textContent = musicList[getIndex()][0].toUpperCase() + musicList[index].slice(1)
-  titleDesktop.textContent = musicList[getIndex()][0].toUpperCase() + musicList[index].slice(1)
+  //titleDesktop.textContent = musicList[getIndex()][0].toUpperCase() + musicList[index].slice(1)
 }
 
 setTitle(index)
@@ -30,31 +30,31 @@ function getIndex() {
   return musicList.findIndex(el => music.src.includes(el))
 }
 
-next.addEventListener('click', () => {
-  index = getIndex()
-  if (index < musicList.length - 1) {
-    index++
-  } 
-  else {
-    index = 0
-  }
-  music.src = `./music/${musicList[index]}.mp3`
-  setTitle(index)
-  musucPlay();
-});
+// next.addEventListener('click', () => {
+//   index = getIndex()
+//   if (index < musicList.length - 1) {
+//     index++
+//   } 
+//   else {
+//     index = 0
+//   }
+//   music.src = `./music/${musicList[index]}.mp3`
+//   setTitle(index)
+//   musucPlay();
+// });
 
-prev.addEventListener('click', () => {
-  index = getIndex()
-  if (index > 0) {
-    index--
-  } 
-  else {
-    index = musicList.length - 1
-  }
-  music.src = `./music/${musicList[index]}.mp3`
-  setTitle(index)
-  musucPlay();
-});
+// prev.addEventListener('click', () => {
+//   index = getIndex()
+//   if (index > 0) {
+//     index--
+//   } 
+//   else {
+//     index = musicList.length - 1
+//   }
+//   music.src = `./music/${musicList[index]}.mp3`
+//   setTitle(index)
+//   musucPlay();
+// });
 
 
 function musucPlay() {
@@ -150,27 +150,27 @@ function setSpeedValue(evt) {
   music.playbackRate = speedList[speedIndexValue]
 }
 
-document.querySelector('.replay').addEventListener('click', () => {
-  if (music.currentTime > 0) {
-    music.currentTime -= 10
-  } else {
-    music.currentTime = 0
-  }
-})
+// document.querySelector('.replay').addEventListener('click', () => {
+//   if (music.currentTime > 0) {
+//     music.currentTime -= 10
+//   } else {
+//     music.currentTime = 0
+//   }
+// })
 
-document.querySelector('.forward').addEventListener('click', () => {
-  if (music.currentTime < music.duration) {
-    music.currentTime += 10
-  } else {
-    music.currentTime = music.duration
-  }
-})
+// document.querySelector('.forward').addEventListener('click', () => {
+//   if (music.currentTime < music.duration) {
+//     music.currentTime += 10
+//   } else {
+//     music.currentTime = music.duration
+//   }
+// })
 
-volumeRange.addEventListener('input', handleVolumeChange);
+// volumeRange.addEventListener('input', handleVolumeChange);
 
-function handleVolumeChange() {
-  music.volume = volumeRange.value / 100
-}
+// function handleVolumeChange() {
+//   music.volume = volumeRange.value / 100
+// }
 
 document.addEventListener('click', (evt) => {
   if(info.querySelector('.info-tultip').classList.contains('active')) {
