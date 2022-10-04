@@ -60,7 +60,7 @@ html {
   width: 100%;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.95);
-  z-index: 1;
+  z-index: 11;
 }
 .header_wrap {
   max-width: 1440px;
@@ -78,7 +78,7 @@ html {
   justify-content: center;
   background-color: transparent;
   border: 0;
-  z-index: 2;
+  z-index: 21;
 }
 .header_logo {
   display: flex;
@@ -197,6 +197,7 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 70%;
+  cursor: pointer;
 }
 .slider_prev {
   left: 0;
@@ -242,6 +243,7 @@ html {
   height: 10px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  cursor: pointer;
 }
 .slider_toggle > span + span {
   margin-left: 6px;
@@ -272,6 +274,7 @@ html {
 }
 .subscriptions {
   margin-bottom: 48px;
+  overflow-x: hidden;
 }
 .subscriptions_title {
   position: relative;
@@ -294,19 +297,23 @@ html {
   background-image: url("../images/group119.svg");
 }
 .subscriptions_list {
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 0 16px;
   gap: 32px;
   margin-bottom: 32px;
 }
 .subscriptions_item {
   min-width: 254px;
+  width: 254px;
   display: flex;
   flex-direction: column;
   padding: 176px 32px 0 32px;
   background-image: url("../images/logo-vector.svg");
   background-repeat: no-repeat;
   background-position: center 15%;
+  
 }
 
 .subscriptions_item:nth-child(2) {
@@ -361,6 +368,7 @@ html {
   min-width: 100%;
   display: inline-block;
   padding: 13px;
+  margin-top: auto;
   margin-bottom: 34px;
   background: #421dd8;
   border: 2px solid #421dd8;
@@ -389,6 +397,7 @@ html {
 .about {
   margin-bottom: 60px;
   color: #111111;
+  overflow-x: hidden;
 }
 .about::before {
   width: 140%;
@@ -523,14 +532,15 @@ html {
   color: #111111;
 }
 .reviews_list {
-  display: flex;
-  min-width: 350%;
-  margin-left: -125%;
+  display: grid;
+  min-width: 150%;
+  margin-left: -27%;
   margin-bottom: 45px;
+  grid-template-columns: repeat(5, 1fr);
   gap: 2%;
 }
 .reviews_item {
-  max-width: 352px;
+  max-width: 337px;
   min-width: 270px;
   display: flex;
   flex-direction: column;
@@ -538,6 +548,7 @@ html {
   background: #ffffff;
   border-radius: 40px;
   filter: drop-shadow(0px 1px 10px rgba(141, 154, 206, 0.5));
+  cursor: pointer;
 }
 .reviews_author {
   padding-bottom: 3px;
@@ -556,7 +567,6 @@ html {
   color: #111111;
 }
 .reviews_time {
-  display: block;
   position: relative;
   align-self: flex-end;
   font-size: 16px;
@@ -647,12 +657,17 @@ html {
   line-height: 32px;
   text-transform: uppercase;
 }
+.trial_wrap {
+  overflow-x: hidden;
+}
 .trial_list {
   position: relative;
   display: flex;
   padding-bottom: 44px;
 }
-
+.trial_item {
+  cursor: pointer;
+}
 .trial_item + .trial_item {
   margin-left: 12px;
 }
@@ -663,7 +678,6 @@ html {
   line-height: 20px;
   color: #111111;
   margin: 0;
-  /* margin-bottom: 16px; */
 }
 .trial_title.active {
   color: #421dd8;
@@ -721,13 +735,13 @@ html {
   line-height: 16px;
   color: #111111;
 }
-.trial_text-wrap > p {
+.trial_text {
   display: none;
 }
-.trial_text-wrap > p:first-of-type {
+.trial_text-show {
   display: block;
 }
-.trial_text-show {
+.trial_btn-show {
   margin: 0 auto;
   margin-bottom: 16px;
   background-color: transparent;
@@ -958,13 +972,15 @@ html {
     display: none;
   }
   .subscriptions_list {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0;
-    margin: 0;
+    margin: 0; */
+    /* width: 100%; */
     margin-bottom: 14px;
   }
   .subscriptions_item {
+    width: auto;
     position: relative;
     padding: 226px 32px 0 32px;
     border: 2.5px solid #8d9ace;
@@ -1065,7 +1081,7 @@ html {
   }
   .less-more_item {
     flex-direction: column;
-    margin-bottom: 0;
+    height: 100%;
   }
   .less-more_wrap {
     display: flex;
@@ -1079,7 +1095,6 @@ html {
   }
   .less-more_wrap > ul {
     text-align: left;
-    margin-top: auto;
   }
   .less-more_wrap > ul > li > ul > li {
     margin-left: 50%;
@@ -1111,11 +1126,6 @@ html {
     line-height: 37px;
   }
   .reviews_list {
-    display: grid;
-    min-width: 150%;
-    margin-left: -25%;
-    margin-bottom: 45px;
-    grid-template-columns: repeat(5, 1fr);
     gap: 1%;
   }
   .reviews_constitutor {
@@ -1194,7 +1204,7 @@ html {
   }
   .trial_item > ul > li {
     position: relative;
-    padding-left: 17px;
+    padding-left: 16px;
     margin-bottom: 14px;
     font-size: 16px;
     line-height: 20px;
@@ -1218,6 +1228,10 @@ html {
     background-image: url("../images/line.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+  .trial_item > ul > li.show-active::before {
+    opacity: 1;
   }
   .trial_description {
     padding: 16px 22px;
@@ -1226,17 +1240,17 @@ html {
     border-radius: 20px;
   }
   .trial_list-reference {
-    width: 165px;
+    width: 145px;
     overflow-x: hidden;
   }
   .trial_list-diary {
     overflow-x: hidden;
-    width: 120px;
+    width: 105px;
   }
-  .trial_text-wrap > p {
+  .trial_text {
     display: block;
   }
-  .trial_text-show {
+  .trial_btn-show {
     display: none;
   }
   .trial_link {
@@ -1300,7 +1314,6 @@ html {
   }
   .trial_link {
     margin-left: 21.5%;
-    
   }
   .footer {
     padding: 60px 12.5%;
