@@ -255,7 +255,7 @@ input[type="range"]::-ms-thumb {
   }
   .player__box-wrap {
     justify-content: flex-start;
-    min-width: 80%;
+    min-width: 75%;
   }
   .player_box {
     display: flex;
@@ -275,5 +275,12 @@ input[type="range"]::-ms-thumb {
   .current-time,
   .duration-time {
     color: #111111;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .player__box-wrap {
+    
+    min-width: 80%;
   }
 }
