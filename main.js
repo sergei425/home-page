@@ -25,12 +25,6 @@
   next.addEventListener("click", () => {
     count++;
     verifyCount(count)
-    // if (count > 0) {
-    //   prev.classList.remove("hidden");
-    // }
-    // if (count === slidesList.length - 1) {
-    //   next.classList.add("hidden");
-    // }
 
     slidesList.forEach((el) => el.classList.remove("slider_item-show"));
     slidesList[count].classList.add("slider_item-show");
@@ -40,12 +34,6 @@
 
   prev.addEventListener("click", () => {
     count--;
-    // if (count < slidesList.length - 1) {
-    //   next.classList.remove("hidden");
-    // }
-    // if (count === 0) {
-    //   prev.classList.add("hidden");
-    // }
     verifyCount(count)
     slidesList.forEach((el) => el.classList.remove("slider_item-show"));
     slidesList[count].classList.add("slider_item-show");
@@ -58,18 +46,6 @@
 
     const index = toggleList.findIndex((el) => el === evt.target);
     count = index;
-    // if (index > 0) {
-    //   prev.classList.remove("hidden");
-    // }
-    // if (index === slidesList.length - 1) {
-    //   next.classList.add("hidden");
-    // }
-    // if (index < slidesList.length - 1) {
-    //   next.classList.remove("hidden");
-    // }
-    // if (index === 0) {
-    //   prev.classList.add("hidden");
-    // }
     verifyCount(count)
     slidesList[index].classList.add("slider_item-show");
     toggleList.forEach((el) => el.classList.remove("active"));

@@ -4,7 +4,6 @@ li {
   padding: 0;
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
@@ -66,7 +65,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5%;
+  padding: 12px 16px;
 }
 .header_btn {
   position: relative;
@@ -127,12 +126,12 @@ html {
   margin: 0 auto;
   margin-bottom: 48px;
 }
-.intro_title-wrap {
+.intro_wrap {
   position: relative;
   padding-top: 325px;
   margin-bottom: 48px;
 }
-.intro_title-wrap::before {
+.intro_wrap::before {
   position: absolute;
   top: 0;
   left: 50%;
@@ -159,12 +158,12 @@ html {
   margin-bottom: 16px;
 }
 .intro_subtitle {
+  max-width: 360px;
+  margin: 0 auto;
   text-align: center;
   font-size: 13px;
   line-height: 16px;
   color: #111111;
-  padding: 0;
-  margin: 0;
 }
 .intro_subtitle > span {
   display: block;
@@ -174,6 +173,8 @@ html {
   margin-bottom: 40px;
 }
 .intro_anxiety-title {
+  margin-bottom: 32px;
+  text-align: center;
   font-family: "Ubuntu Condensed";
   font-size: 28px;
   line-height: 32px;
@@ -199,19 +200,19 @@ html {
   cursor: pointer;
 }
 .slider_prev {
-  left: 0;
+  left: -7%;
   transform: rotate(180deg);
 }
 .hidden {
   display: none;
 }
 .slider_next {
-  right: 0;
+  right: -7%;
 }
 .slider_sliders {
   width: 100%;
   overflow: hidden;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 .slider_item {
   min-width: 100%;
@@ -235,6 +236,7 @@ html {
 .slider_toggle {
   display: flex;
   justify-content: center;
+  margin-bottom: 32px;
 }
 .slider_toggle > span {
   display: inline-block;
@@ -254,10 +256,10 @@ html {
   text-align: center;
 }
 .intro_link-wrap > a {
-  max-width: 374px;
+  padding: 16px 117px 16px 43px;
+  max-width: 396px;
   margin: 0 auto;
   display: block;
-  padding: 12px;
   background: #421dd8;
   border: 2px solid #421dd8;
   border-radius: 15px;
@@ -268,7 +270,7 @@ html {
   color: #ffffff;
   background-image: url("../images/arrow-copy.svg");
   background-repeat: no-repeat;
-  background-position: 96% center;
+  background-position: 90% center;
   background-size: 7%;
 }
 .subscriptions {
@@ -280,7 +282,9 @@ html {
   margin-bottom: 45px;
   font-family: "Ubuntu Condensed";
   text-align: center;
-  margin-bottom: 60px;
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 36px;
   text-transform: uppercase;
   color: #000000;
 }
@@ -298,19 +302,18 @@ html {
 .subscriptions_list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0 16px;
+  padding: 0 32px;
   gap: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 .subscriptions_item {
-  min-width: 254px;
-  width: 254px;
+  min-width: 233px;
   display: flex;
   flex-direction: column;
   padding: 176px 32px 0 32px;
   background: rgba(255, 255, 255, 0.2);
   border: 2.5px solid #8d9ace;
-    border-radius: 45px;
+  border-radius: 45px;
   background-image: url("../images/logo-vector.svg");
   background-repeat: no-repeat;
   background-position: center 15%;
@@ -331,7 +334,7 @@ html {
   text-align: center;
   font-weight: 500;
   font-size: 13px;
-  line-height: 15px;
+  line-height: 16px;
   letter-spacing: 0.01em;
   color: #111111;
 }
@@ -366,7 +369,7 @@ html {
 .subscriptions_item > a {
   min-width: 100%;
   display: inline-block;
-  padding: 13px;
+  padding: 16px 15px;
   margin-top: auto;
   margin-bottom: 34px;
   background: #421dd8;
@@ -384,29 +387,30 @@ html {
   width: 70%;
   margin: 0 auto;
   text-align: center;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 16px;
   color: #111111;
 }
 .subscriptions > p > a {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 16px;
   color: #3f3176;
 }
 .about {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   color: #111111;
   overflow-x: hidden;
 }
 .about::before {
-  width: 140%;
-  height: 380px;
+  width: 100%;
+  height: calc(70vw / 2);
+  min-height: 167px;
   display: block;
   content: "";
-  background-image: url("../images/photo.png");
+  background-image: url("../images/photo-mobile.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -75px center;
+  background-size: 100% 100%;
+  background-position: center center;
 }
 .about_wrap {
   position: relative;
@@ -420,7 +424,10 @@ html {
   content: "";
   width: 60px;
   height: 15px;
+  border-radius: 2px;
+  background: #8d9ace;
   transform: rotate(90deg);
+  z-index: 1;
 }
 .about_title {
   font-family: "Ubuntu Condensed";
@@ -429,13 +436,12 @@ html {
   text-transform: uppercase;
 }
 .about_description {
-  font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 48px;
+  font-size: 13px;
+  line-height: 16px;
 }
 .less-more {
   padding: 0 16px;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   color: #111111;
   text-align: left;
 }
@@ -446,15 +452,15 @@ html {
   text-transform: uppercase;
 }
 .less-more_subtitle {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 16px;
   margin-bottom: 34px;
 }
 .less-more_subtitle > p > span {
   display: block;
   font-weight: bold;
 }
- .less-more_list {
+.less-more_list {
   margin-bottom: 30px;
 }
 .less-more_item {
@@ -462,6 +468,9 @@ html {
   padding-left: 86px;
   margin-bottom: 34px;
   margin-left: 17px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #111111;
 }
 .less-more_item::before {
   position: absolute;
@@ -478,9 +487,8 @@ html {
 }
 .less-more_item-title {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #111111;
+  font-size: 15px;
+  line-height: 18px;
 }
 .less-more_item > ul > li,
 .less-more_item > ul > li > ul > li {
@@ -508,7 +516,7 @@ html {
   background-color: #111111;
 }
 .less-more_link {
-  max-width: 374px;
+  max-width: 396px;
   margin: 0 auto;
   display: block;
   padding: 12px;
@@ -525,7 +533,7 @@ html {
   color: #ffffff;
 }
 .reviews {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   overflow: hidden;
 }
 .reviews_title {
@@ -539,20 +547,19 @@ html {
 .reviews_list {
   display: grid;
   min-width: 150%;
-  margin-left: -27%;
-  margin-bottom: 45px;
+  margin-left: -75%;
+  margin-bottom: 55px;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2%;
+  gap: 16px;
 }
 .reviews_item {
-  max-width: 337px;
-  min-width: 270px;
+  min-width: 347px;
   display: flex;
   flex-direction: column;
   padding: 14px 34px;
   background: #ffffff;
   border-radius: 40px;
-  filter: drop-shadow(0px 1px 10px rgba(141, 154, 206, 0.5));
+  box-shadow: 0px 1px 10px rgba(141, 154, 206, 0.5);
   cursor: pointer;
 }
 .reviews_author {
@@ -598,11 +605,20 @@ html {
   justify-content: center;
   align-items: center;
   min-width: 100%;
-  height: 344px;
+  min-height: 232px;
+  height: calc(100vw / 2);
+  margin-bottom: 32px;
   background-image: url("../images/плеер.png");
   background-repeat: no-repeat;
   background-size: 110% 90%;
   background-position: center center;
+  overflow: hidden;
+}
+.reviews_video-player {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: #000 !important;
 }
 .reviews_video-btn {
   border: none;
@@ -612,6 +628,7 @@ html {
   display: flex;
   flex-direction: column;
   padding: 0 16px;
+  color: #111111;
 }
 .reviews_constitutor-goals {
   font-size: 16px;
@@ -619,8 +636,9 @@ html {
   color: #111111;
 }
 .reviews_constitutor-title {
-  font-weight: 500;
-  margin-top: 0;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 20px;
 }
 .reviews_constitutor-list {
   margin-left: 10px;
@@ -629,6 +647,8 @@ html {
 .reviews_constitutor-item {
   position: relative;
   padding-left: 14px;
+  font-size: 13px;
+  line-height: 16px;
 }
 .reviews_constitutor-item::before {
   position: absolute;
@@ -642,11 +662,10 @@ html {
   background-color: #111111;
 }
 .reviews_constitutor-link {
-  max-width: 374px;
-  margin: 0 auto;
+  max-width: 396px;
+  width: 100%;
   display: block;
   margin: 0 auto;
-  width: 100%;
   padding: 12px;
   background: #421dd8;
   border: 2px solid #421dd8;
@@ -664,8 +683,8 @@ html {
 }
 .trial-title {
   font-family: "Ubuntu Condensed";
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 32px;
+  line-height: 37px;
   text-transform: uppercase;
 }
 .trial_wrap {
@@ -685,20 +704,17 @@ html {
 .trial_title {
   display: inline-block;
   white-space: nowrap;
-  font-size: 16px;
-  line-height: 20px;
-  color: #111111;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(17, 17, 17, 0.7);
   margin: 0;
 }
 .trial_title.active {
   color: #421dd8;
 }
-.trial_item > ul {
+.trial_nested-list {
   position: absolute;
   left: 0;
-  display: none;
-}
-.trial_item > ul.show {
   display: flex;
 }
 .trial_item > ul > li {
@@ -721,18 +737,19 @@ html {
   gap: 10px;
 }
 .trial_description-title {
-  margin: 0;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #111111;
+  display: none;
 }
 .trial_description-text {
   font-size: 13px;
   line-height: 16px;
   color: #111111;
+}
+.trial_description-text > p {
+  font-size: 13px;
+  line-height: 16px;
+}
+.trial_description-text > p:not(:last-of-type) {
+  margin: 0;
 }
 .trial_description-text > p > span {
   display: block;
@@ -747,7 +764,10 @@ html {
   color: #111111;
 }
 .trial_text {
+  font-size: 13px;
+  line-height: 16px;
   display: none;
+  margin: 0;
 }
 .trial_text-show {
   display: block;
@@ -758,6 +778,9 @@ html {
   background-color: transparent;
   border: 0;
   transform: rotate(45deg);
+}
+.trial_btn-show.trial_btn-close {
+  transform: rotate(0);
 }
 .trial_link {
   max-width: 374px;
@@ -815,13 +838,6 @@ html {
   .intro {
     padding: 0 34px;
   }
-  .intro_title-wrap {
-    padding-top: 370px;
-  }
-  .intro_title-wrap::before {
-    max-width: 446px;
-    height: 340px;
-  }
   .about_wrap {
     position: relative;
     padding: 0 34px;
@@ -831,6 +847,11 @@ html {
   }
   .reviews_constitutor-info {
     padding: 0 34px;
+  }
+  .reviews_video {
+    max-width: 700px;
+    min-width: 0;
+    margin: 0 auto;
   }
   .trial {
     padding: 0 34px;
@@ -890,11 +911,11 @@ html {
     padding: 144px 8% 0 10%;
     margin-bottom: 54px;
   }
-  .intro_title-wrap {
+  .intro_wrap {
     padding-top: 0;
     margin-bottom: 0;
   }
-  .intro_title-wrap::before {
+  .intro_wrap::before {
     top: -144px;
     right: -14.5%;
     left: auto;
@@ -927,7 +948,8 @@ html {
     border-radius: 2px;
   }
   .intro_subtitle {
-    width: 424px;
+    max-width: 420px;
+    margin: 0;
     margin-bottom: 32px;
     text-align: left;
     font-size: 16px;
@@ -999,7 +1021,6 @@ html {
     padding: 226px 32px 0 32px;
     background-image: url("../images/logo-vector.svg");
     background-position: 15% 25%;
-
   }
   .subscriptions_item::before {
     position: absolute;
@@ -1042,13 +1063,15 @@ html {
     display: flex;
     align-items: center;
     gap: 30px;
-    padding: 0 5%;
+    padding: 0 7%;
     text-align: right;
   }
   .about::before {
     order: 1;
-    min-width: 50%;
+    min-width: 450px;
+    width: 50%;
     height: 512px;
+    background-image: url("../images/photo.png");
     background-size: contain;
     background-position: center;
   }
@@ -1062,7 +1085,6 @@ html {
     right: -70px;
     bottom: 0;
     height: 20px;
-    background: #8d9ace;
     border-radius: 5px;
     transform: rotate(0);
   }
@@ -1153,9 +1175,9 @@ html {
     font-size: 32px;
     line-height: 37px;
   }
-  .reviews_list {
+  /* .reviews_list {
     gap: 1%;
-  }
+  } */
   .reviews_constitutor {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1163,6 +1185,8 @@ html {
   }
   .reviews_video {
     background-size: 100% 100%;
+    width: 100%;
+    height: auto;
   }
   .reviews_constitutor-info {
     padding: 0;
@@ -1208,6 +1232,7 @@ html {
   .trial_title.active {
     margin-bottom: 16px;
     color: #111111;
+    transition: margin-bottom 0.4s;
   }
   .trial_title::after {
     display: block;
@@ -1218,17 +1243,22 @@ html {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    transition: transform 0.3s;
   }
-  trial_title.active::after {
+  .trial_title.active::after {
     transform: rotate(180deg);
+    transition: transform 0.3s;
   }
-  .trial_item > ul {
+  .trial_nested-list {
+    transform: scale(0);
     position: sticky;
     display: none;
     overflow: hidden;
-  }
-  .trial_item > ul.show {
     display: block;
+  }
+  .trial_title.active + .trial_nested-list {
+    transform: scale(1);
+    transition: transform 2s;
   }
   .trial_item > ul > li {
     position: relative;
@@ -1244,6 +1274,7 @@ html {
     line-height: 16px;
     font-size: 13px;
     color: #111111;
+    transition: font-size 0.4s;
   }
   .trial_item > ul > li::before {
     position: absolute;
@@ -1260,12 +1291,25 @@ html {
   }
   .trial_item > ul > li.show-active::before {
     opacity: 1;
+    width: 10px;
+    height: 8px;
+    transition: opacity 0.4s;
   }
   .trial_description {
     padding: 16px 22px;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 2px 100px rgba(114, 100, 170, 0.25);
     border-radius: 20px;
+  }
+  .trial_description-title {
+    display: block;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #111111;
+    margin-top: 0;
   }
   .trial_list-reference {
     width: 145px;
@@ -1319,7 +1363,7 @@ html {
     text-align: end;
   }
   .about {
-    padding: 0 20%;
+    padding: 0 16%;
   }
   .less-more {
     padding: 0 24%;
@@ -1328,7 +1372,7 @@ html {
     margin: 0 12.5%;
   }
   .trial {
-    margin: 0 12.5%;
+    margin: 0 12%;
   }
   .trial_link {
     margin-left: 21.5%;

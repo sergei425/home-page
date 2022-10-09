@@ -8,8 +8,8 @@
   <title>Нежно</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Ubuntu+Condensed&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/style2.css">
 </head>
@@ -34,21 +34,21 @@
           <li class="nav_item"><a href="/contacts">Контакты</a></li>
         </ul>
       </nav>
-      <div class="header_user">
+      <a href="#" class="header_user">
         <img src="/images/user.svg" alt="user">
-      </div>
+      </a>
       <a class="header-btn" href="">Старт</a>
     </div>
   </header>
   <main class="main">
     <section class="intro">
-      <div class="intro_title-wrap">
-        <h1 class="intro_title">Здравствуй, <span>это Нежно Space</span></h1>
-        <p class="intro_subtitle">Платформа психологической поддержки
-          на основе Искусственного Интеллекта. Мы здесь, чтобы помочь справиться с расстройством пищевого поведения и
-          выгоранием. Наши алгоритмы формируют <span>подборку упражнений</span>
-          с учетом твоих конкретных тревог и сложностей.
-        </p>
+      <div class="intro_wrap">
+          <h1 class="intro_title">Здравствуй, <span>это Нежно Space</span></h1>
+          <p class="intro_subtitle">Платформа психологической поддержки
+            на основе Искусственного Интеллекта. Мы здесь, чтобы помочь справиться с расстройством пищевого поведения
+            и&#160;выгоранием. Наши алгоритмы формируют подборку <span>упражнений</span>
+            с учетом твоих конкретных тревог и&#160; сложностей.
+          </p>
       </div>
       <div class="intro_anxiety">
         <h2 class="intro_anxiety-title">Меня тревожит:</h2>
@@ -185,7 +185,7 @@
           <p>Ничего не происходит без поддержки.
             Наша платформа создана специально, чтобы она у тебя была в доступе 24/7. Мы здесь, чтобы помочь тебе выйти
             из тупика эмоционального выгорания, справиться с РПП, повысить самооценку.</p>
-          <p>Позволь Нежно Space показать тебе, насколько чудесная ты.</p>
+          <p>Позволь Нежно Space показать тебе, насколько<br> чудесная ты.</p>
         </div>
       </div>
     </section>
@@ -201,36 +201,36 @@
       </div>
       <ul class="less-more_list">
         <li class="less-more_item">
-            <h3 class="less-more_item-title">Общие материалы
-              по теме месяца:</h3>
-            <ul>
-              <li>Статья от специалиста</li>
-              <li>Психообразование</li>
-              <li>Гайд</li>
-              <li>Терапия</li>
-            </ul>
+          <h3 class="less-more_item-title">Общие материалы
+            по теме месяца:</h3>
+          <ul>
+            <li>Статья от специалиста</li>
+            <li>Психообразование</li>
+            <li>Гайд</li>
+            <li>Терапия</li>
+          </ul>
         </li>
         <li class="less-more_item">
-            <h3 class="less-more_item-title">Умная подборка:</h3>
-            <ul>
-              <li>
-                <span>Визуализация твоего прогресса</span>
-                <ul>
-                  <li>Упражнения</li>
-                  <li>Медитации</li>
-                  <li>Опросники</li>
-                </ul>
-              </li>
-            </ul>
+          <h3 class="less-more_item-title">Умная подборка:</h3>
+          <ul>
+            <li>
+              <span>Визуализация твоего прогресса</span>
+              <ul>
+                <li>Упражнения</li>
+                <li>Медитации</li>
+                <li>Опросники</li>
+              </ul>
+            </li>
+          </ul>
         </li>
         <li class="less-more_item">
           <h3 class="less-more_item-title">Тренажеры:</h3>
-            <ul>
-              <li>Практики осознанного питания</li>
-              <li>Практики инутивного питания</li>
-              <li>Дневник питания</li>
-              <li>Дневник эмоций</li>
-            </ul>
+          <ul>
+            <li>Практики осознанного питания</li>
+            <li>Практики инутивного питания</li>
+            <li>Дневник питания</li>
+            <li>Дневник эмоций</li>
+          </ul>
         </li>
       </ul>
       <a class="less-more_link" href="">начать</a>
@@ -280,8 +280,9 @@
       </div>
       <div class="reviews_constitutor">
         <div class="reviews_video">
-          <button class="reviews_video-btn">
-            <img src="./images/play.png" alt="play">
+          <video class="reviews_video-player visually-hidden" id="video" src="videos/gone.mp4" controls></video>
+          <button class="reviews_video-btn" id="play">
+            <img src="./images/play2.svg" alt="play">
           </button>
         </div>
         <div class="reviews_constitutor-info">
@@ -314,7 +315,7 @@
         <ul class="trial_list">
           <li class="trial_item">
             <h3 class="trial_title active">Тема 1</h3>
-            <ul class="show">
+            <ul class="trial_nested-list">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -328,7 +329,7 @@
           </li>
           <li class="trial_item">
             <h3 class="trial_title">Тема 2</h3>
-            <ul>
+            <ul class="trial_nested-list visually-hidden">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -342,7 +343,7 @@
           </li>
           <li class="trial_item">
             <h3 class="trial_title">Тема 3</h3>
-            <ul>
+            <ul class="trial_nested-list visually-hidden">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -356,7 +357,7 @@
           </li>
           <li class="trial_item">
             <h3 class="trial_title">Тема 4</h3>
-            <ul>
+            <ul class="trial_nested-list visually-hidden">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -370,7 +371,7 @@
           </li>
           <li class="trial_item">
             <h3 class="trial_title">Тема 5</h3>
-            <ul>
+            <ul class="trial_nested-list visually-hidden">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -384,7 +385,7 @@
           </li>
           <li class="trial_item">
             <h3 class="trial_title">Тема 6</h3>
-            <ul>
+            <ul class="trial_nested-list visually-hidden">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -398,7 +399,7 @@
           </li>
           <li class="trial_item">
             <h3 class="trial_title">Тема 7</h3>
-            <ul>
+            <ul class="trial_nested-list visually-hidden">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -412,7 +413,7 @@
           </li>
           <li class="trial_item">
             <h3 class="trial_title">Тема 8</h3>
-            <ul>
+            <ul class="trial_nested-list visually-hidden">
               <li class="show-active">
                 <p>Общее</p>
               </li>
@@ -519,7 +520,8 @@
             </div>
           </div>
           <div class="trial_text-wrap">
-            <p class="trial_text trial_text-show">Цель гайда предложить тебе книги, фильмы, проекты, подкасты по принципу - ровно столько, сколько нужно.
+            <p class="trial_text trial_text-show">Цель гайда предложить тебе книги, фильмы, проекты, подкасты по
+              принципу - ровно столько, сколько нужно.
               less is more. Мозгу так легче сфокусироваться и сделать первый шаг. Гайды Нежно Space - это не список
               литературы на лето. Ты можешь ограничиться цитатами из книг, которые мы подобрали. Главное - это еще одно
               маленькое усилие для себя.</p>
