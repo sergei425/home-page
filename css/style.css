@@ -545,15 +545,21 @@ html {
   color: #111111;
 }
 .reviews_list {
-  display: grid;
+  margin-bottom: 55px;
+  /* display: grid;
   min-width: 150%;
   margin-left: -75%;
   margin-bottom: 55px;
   grid-template-columns: repeat(5, 1fr);
+  gap: 16px; */
+}
+.slick-track {
+  display: flex;
   gap: 16px;
 }
 .reviews_item {
-  min-width: 347px;
+  min-width: 0;
+  max-width: 347px;
   display: flex;
   flex-direction: column;
   padding: 14px 34px;
@@ -601,9 +607,10 @@ html {
   background-repeat: no-repeat;
 }
 .reviews_video {
-  display: flex;
+  position: relative;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   min-width: 100%;
   min-height: 232px;
   height: calc(100vw / 2);
@@ -621,8 +628,13 @@ html {
   background-color: #000 !important;
 }
 .reviews_video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: none;
   background-color: transparent;
+  z-index: 2;
 }
 .reviews_constitutor-info {
   display: flex;
