@@ -144,7 +144,7 @@ html {
   transform: translateX(-50%);
   display: block;
   content: "";
-  width: 100%;
+  min-width: 396px;
   max-width: 396px;
   height: 290px;
   background-image: url("../images/intro-mobile.png");
@@ -263,7 +263,7 @@ html {
 }
 .intro_link-wrap > a {
   padding: 16px 117px 16px 43px;
-  max-width: 396px;
+  width: 396px;
   margin: 0 auto;
   display: block;
   background: #421dd8;
@@ -403,11 +403,22 @@ html {
   color: #3f3176;
 }
 .about {
+  position: relative;
   margin-bottom: 48px;
   color: #111111;
-  overflow-x: hidden;
+  /* overflow: hidden; */
 }
-.about::before {
+.about__image {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 427px;
+  height: 167px;
+}
+/* .about::before {
+  margin: 0 auto;
+  width: 427px;
+  height: 167px;
   width: 100%;
   height: calc(70vw / 2);
   min-height: 167px;
@@ -415,15 +426,28 @@ html {
   content: "";
   background-image: url("../images/photo-mobile.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center center;
+  background-size: 100% 100% ;
+  background-position: left center;
+} */
+.about__image::before {
+  position: absolute;
+  left: 5%;
+  top: 144px;
+  display: block;
+  content: "";
+  width: 60px;
+  height: 15px;
+  border-radius: 2px;
+  background: #8d9ace;
+  transform: rotate(90deg);
+  z-index: 12;
 }
 .about_wrap {
   position: relative;
   padding: 0 16px;
 }
 .about_wrap::before {
-  position: absolute;
+  /* position: absolute;
   left: 10px;
   top: -44px;
   display: block;
@@ -433,7 +457,7 @@ html {
   border-radius: 2px;
   background: #8d9ace;
   transform: rotate(90deg);
-  z-index: 1;
+  z-index: 1; */
 }
 .about_title {
   font-family: "Ubuntu Condensed";
@@ -926,7 +950,7 @@ html {
     color: #111111;
   }
   .intro {
-    padding: 144px 8% 0 10%;
+    padding: 144px 9% 0 9%;
     margin-bottom: 54px;
   }
   .intro_wrap {
@@ -937,8 +961,8 @@ html {
     top: -144px;
     right: -14.5%;
     left: auto;
-    width: 336px;
-    height: 468px;
+    min-width: 336px;
+    min-height: 468px;
     background-image: url("../images/intro.png");
   }
   .intro_title {
@@ -1079,12 +1103,27 @@ html {
   }
   .about {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     gap: 30px;
     padding: 0 7%;
     text-align: right;
+    margin-bottom: 64px;
   }
-  .about::before {
+  .about__image {
+    min-width: 450px;
+    height: 512px;
+  }
+  .about__image::before {
+    left: auto;
+    top: auto;
+    right: 414px;
+    bottom: 27px;
+    height: 20px;
+    border-radius: 5px;
+    transform: rotate(0);
+  }
+  /* .about::before {
     order: 1;
     min-width: 450px;
     width: 50%;
@@ -1092,11 +1131,12 @@ html {
     background-image: url("../images/photo.png");
     background-size: contain;
     background-position: center;
-  }
+  } */
   .about_wrap {
+    width: 50%;
     padding: 0;
   }
-  .about_wrap::before {
+  /* .about_wrap::before {
     position: absolute;
     left: auto;
     top: auto;
@@ -1105,8 +1145,9 @@ html {
     height: 20px;
     border-radius: 5px;
     transform: rotate(0);
-  }
+  } */
   .about_title {
+    
     font-size: 40px;
     line-height: 46px;
   }
@@ -1114,6 +1155,7 @@ html {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 0;
+
   }
   .less-more {
     padding: 0 10%;
@@ -1362,7 +1404,7 @@ html {
     padding: 24px 11%;
   }
   .intro {
-    padding: 144px 16% 0 20%;
+    padding: 144px 17% 0 18%;
   }
   .slider_prev {
     left: -80px;
@@ -1382,6 +1424,12 @@ html {
   }
   .about {
     padding: 0 16%;
+  }
+  .about_title {
+    margin-left: 75px;
+  }
+  .about_description {
+    padding-left: 45px;
   }
   .less-more {
     padding: 0 24%;
